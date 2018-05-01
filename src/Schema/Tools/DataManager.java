@@ -2,7 +2,12 @@ package Schema.Tools;
 
 import Schema.Data;
 import Sites.Peer;
+import Sites.Tools.PeersManager;
+import ToolBox.PlotManager;
 import ToolBox.PseudoRand;
+import org.knowm.xchart.XYSeries;
+import org.knowm.xchart.style.markers.SeriesMarkers;
+
 import java.util.ArrayList;
 
 public class DataManager {
@@ -135,7 +140,8 @@ public class DataManager {
                 p_doSky = DataManager.isDom(maxSys, p.getPmaxSys()); // p do skyline if not dominated by maxSys
                 up_doSky = up_doSky & p_doSky; // up do sky if all peers of the up do SkyLine
 
-                if (!p_doSky) nbp_doSky++;
+                if (!p_doSky) {nbp_doSky++; p.setPparticipant(true);}
+                else{p.setPparticipant(false);}
                 p_doSky = true;
             }
 
@@ -150,6 +156,7 @@ public class DataManager {
 
         return nbs;
     }
+
 
 
     /**
@@ -239,8 +246,73 @@ public class DataManager {
         return v;
     }
 
+    // Upeers SkyLine
+    public static void alterSkyLine(ArrayList<Peer> uPeers){
+        // Editable uPeers list
+        ArrayList<Peer> ups = new ArrayList<>(uPeers);
+
+        // SkyLine on Upeers by maxSys
+        ArrayList<Data> upeers_maxSys = PeersManager.getMaxSysList(uPeers, 1);
+        ArrayList<Data> upeer_sky = skyLine(upeers_maxSys);
+
+        for (Peer up: ups
+             ) {
+            if(upeer_sky.indexOf(up.getUpmaxSys())==-1) // upeer not in the upeerSkyline
+                //ups.remove(up); // remove the upeer
+                up.setUPparticipant(false);
+            else{ // upeer in the upeerSkyLine
+                up.setUPparticipant(true);
+                // SkyLine on peers by maxSys
+                ArrayList<Data> peers_maxSys = PeersManager.getMaxSysList(up.getPeers(), 0);
+                ArrayList<Data> peer_sky = skyLine(peers_maxSys);
+
+                for (Peer p: up.getPeers()
+                     ) {
+                    if(peer_sky.indexOf(p.getPmaxSys())==-1)
+                        //up.getPeers().remove(p);
+                        p.setPparticipant(false);
+                    else
+                        p.setPparticipant(true);
+                }
+
+            }
+        }
+
+        // Sky
+
+        ArrayList<Data> data_sky= new ArrayList<>();
+        for (Peer up: ups
+                ) {
+            if (up.isUPparticipant())
+                for (Peer p: up.getPeers()
+                        ) {
+
+                    if (p.isPparticipant())
+                        for (Data d: p.getData()
+                             ) {
+                            data_sky.add(d);
+                        }
+                }
+        }
 
 
+        ArrayList<Data> sky = skyLine(data_sky);
+        ArrayList<String> plots;
+        ArrayList<PlotManager> pms;
+
+        // 4) Display Console SkyLine
+        System.out.println("\n\t SkyLine\n");
+        System.out.println(sky.size()+"/"+data_sky.size());
+        DataManager.display_data_console(sky);
+
+        // 5) Display Plots SkyLine
+        plots = PlotManager.create_plots(Data.NB_ATTRIBUTES);
+        pms = PlotManager.create_pms(plots, data_sky);
+        for (int i = 0; i < pms.size(); i++) {
+            pms.get(i).addSeries("S"+plots.get(i)+" sky", SeriesMarkers.DIAMOND, XYSeries.XYSeriesRenderStyle.Line, DataManager.get_c_s(sky,Integer.valueOf(plots.get(i).split("/")[0])), DataManager.get_c_s(sky, Integer.valueOf(plots.get(i).split("/")[1])));
+            pms.get(i).display_plot("plot"+plots.get(i));
+        }
+    }
 
 
 }

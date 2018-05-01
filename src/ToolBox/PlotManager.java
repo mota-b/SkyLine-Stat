@@ -1,11 +1,14 @@
 package ToolBox;
 
+import Schema.Data;
+import Schema.Tools.DataManager;
 import org.knowm.xchart.SwingWrapper;
 import org.knowm.xchart.XYChart;
 import org.knowm.xchart.XYChartBuilder;
 import org.knowm.xchart.XYSeries;
 import org.knowm.xchart.style.Styler;
 import org.knowm.xchart.style.markers.Marker;
+import org.knowm.xchart.style.markers.SeriesMarkers;
 
 import java.util.ArrayList;
 
@@ -56,5 +59,37 @@ public class PlotManager {
         SwingWrapper s = new SwingWrapper<>(chart);
         s.displayChart(title);
     }
+
+
+    // Create list of plotFrameNames
+    public static ArrayList<String> create_plots(int nb_c){
+        ArrayList<String> plots = new ArrayList<>();
+
+        for (int i = 0; i < nb_c; i++) {
+            for (int j = 0; j < nb_c; j++) {
+                if (j!=i &&
+                        plots.indexOf(i+"/"+j) ==-1 &&
+                        plots.indexOf(j+"/"+i) ==-1) {
+                    plots.add(i+"/"+j);
+
+                }
+            }
+        }
+
+        return plots;
+    }
+
+    // Cerate liste of PlotFrames
+    public static ArrayList<PlotManager> create_pms(ArrayList<String> plots, ArrayList<Data> data ){
+        ArrayList<PlotManager> pms = new ArrayList<>();
+
+        for (int i = 0; i < plots.size(); i++) {
+            pms.add (new PlotManager());
+            pms.get(pms.size()-1).addSeries("S"+plots.get(i), SeriesMarkers.CROSS, XYSeries.XYSeriesRenderStyle.Scatter,  DataManager.get_c_s(data,Integer.valueOf(plots.get(i).split("/")[0])), DataManager.get_c_s(data, Integer.valueOf(plots.get(i).split("/")[1])));
+        }
+
+        return pms;
+    }
+
 
 }

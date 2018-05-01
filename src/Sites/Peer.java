@@ -17,6 +17,10 @@ public class Peer {
     private ArrayList<Data> data;
     private boolean isUpeer; // *False ==> peer has the Id of his Upeer
                             //  *True  ==> peer is a Upeer and has peers
+
+    private boolean isPparticipant;
+    private boolean isUPparticipant;
+
     // if Simple Peer
     private Data pmaxSys;
     private int upeer_id;
@@ -106,6 +110,19 @@ public class Peer {
         this.upmaxSys = maxSys;
     }
 
+    public boolean isPparticipant() {
+        return this.isPparticipant;
+    }
+    public void setPparticipant(boolean participant) {
+        this.isPparticipant = participant;
+    }
+
+    public boolean isUPparticipant() {
+        return this.isUPparticipant;
+    }
+    public void setUPparticipant(boolean participant) {
+        this.isUPparticipant = participant;
+    }
 
     /**
      * Methodes

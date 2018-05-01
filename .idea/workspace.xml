@@ -2,10 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="961b8388-1f73-4609-aef1-4953393bc44a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ToolBox/PseudoRand.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Work1_4.0.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Work1_4.0.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Schema/Tools/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Schema/Tools/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sites/Peer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sites/Peer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Sites/Tools/PeersManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Sites/Tools/PeersManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ToolBox/PlotManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ToolBox/PlotManager.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,35 +18,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-120">
-              <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+            <state relative-caret-position="97">
+              <caret line="114" column="89" lean-forward="true" selection-start-line="114" selection-start-column="89" selection-end-line="114" selection-end-column="89" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PseudoRand.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ToolBox/PseudoRand.java">
+      <file leaf-file-name="Peer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sites/Peer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="321">
+              <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
               <folding>
-                <element signature="method#p_rand_equation#0;class#PseudoRand#0" />
-                <element signature="method#p_rand_data#0;class#PseudoRand#0" />
+                <element signature="imports" expanded="true" />
+                <element signature="method#setIsUpeer#0;class#Peer#0" />
+                <element signature="method#toString#0;class#Peer#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PlotManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ToolBox/PlotManager.java">
+      <file leaf-file-name="PeersManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Sites/Tools/PeersManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-260">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="625">
+              <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#generatePeers#0;class#PeersManager#0" />
+                <element signature="method#display_peers_console#0;class#PeersManager#0" />
+                <element signature="method#display_distribution#0;class#PeersManager#0" />
+                <element signature="method#sky_participant#0;class#PeersManager#0" />
+                <element signature="method#getMaxSysList#0;class#PeersManager#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DataManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Schema/Tools/DataManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="452">
+              <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+              <folding>
+                <element signature="method#distribute_data_toPeers#0;class#DataManager#0" />
+                <element signature="method#maxSys_data#0;class#DataManager#0" />
+                <element signature="method#maxSys_peers#0;class#DataManager#0" />
+                <element signature="method#maxSys_upeers#0;class#DataManager#0" />
+                <element signature="method#particip#0;class#DataManager#0" />
+                <element signature="method#display_data_console#0;class#DataManager#0" />
+                <element signature="method#get_c_s#0;class#DataManager#0" />
+                <element signature="method#skyLine#0;class#DataManager#0" />
+                <element signature="method#isDominant#0;class#DataManager#0" />
+                <element signature="method#isDom#0;class#DataManager#0" />
+                <element signature="method#alterSkyLine#0;class#DataManager#0" />
               </folding>
             </state>
           </provider>
@@ -80,13 +109,14 @@
         <option value="$PROJECT_DIR$/src/ToolBox/DataComparator.java" />
         <option value="$PROJECT_DIR$/src/Schema/Data.java" />
         <option value="$PROJECT_DIR$/src/ToolBox/DataManager.java" />
-        <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Schema/Tools/DataComparator.java" />
         <option value="$PROJECT_DIR$/src/ToolBox/PseudoRand.java" />
-        <option value="$PROJECT_DIR$/src/Schema/Tools/DataManager.java" />
-        <option value="$PROJECT_DIR$/src/Sites/Peer.java" />
-        <option value="$PROJECT_DIR$/src/Sites/Tools/PeersManager.java" />
         <option value="$PROJECT_DIR$/src/Sites/Tools/UpeersManager.java" />
+        <option value="$PROJECT_DIR$/src/Sites/Peer.java" />
+        <option value="$PROJECT_DIR$/src/ToolBox/PlotManager.java" />
+        <option value="$PROJECT_DIR$/src/Schema/Tools/DataManager.java" />
+        <option value="$PROJECT_DIR$/src/Sites/Tools/PeersManager.java" />
+        <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
   </component>
@@ -97,6 +127,7 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="960" />
     <option name="y" value="27" />
     <option name="width" value="960" />
     <option name="height" value="1053" />
@@ -172,7 +203,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../data/xchart-3.5.1/xchart-3.5.1/xchart-3.5.1.jar!/" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../work1_2.0" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
@@ -266,12 +297,12 @@
       <option name="presentableId" value="Default" />
       <updated>1525169636435</updated>
       <workItem from="1525169639811" duration="1146000" />
-      <workItem from="1525170798483" duration="7435000" />
+      <workItem from="1525170798483" duration="16442000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8581000" />
+    <option name="totallyTimeSpent" value="17588000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -295,12 +326,12 @@
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="7" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="3" visible="true" weight="0.30837005" />
+      <window_info active="true" anchor="bottom" id="Run" order="3" visible="true" weight="0.2709251" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.13546255" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.27422908" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16559829" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16559829" />
       <window_info anchor="right" id="Database" order="6" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -353,17 +384,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ToolBox/FileManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="259">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#getDataSet#0;class#FileManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Schema/Data.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -385,74 +405,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Schema/Tools/DataManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-588">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
-          <folding>
-            <element signature="method#distribute_data_toPeers#0;class#DataManager#0" />
-            <element signature="method#maxSys_data#0;class#DataManager#0" />
-            <element signature="method#maxSys_peers#0;class#DataManager#0" />
-            <element signature="method#maxSys_upeers#0;class#DataManager#0" />
-            <element signature="method#particip#0;class#DataManager#0" />
-            <element signature="method#display_data_console#0;class#DataManager#0" />
-            <element signature="method#get_c_s#0;class#DataManager#0" />
-            <element signature="method#skyLine#0;class#DataManager#0" />
-            <element signature="method#isDominant#0;class#DataManager#0" />
-            <element signature="method#isDom#0;class#DataManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sites/Peer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1612">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#setIsUpeer#0;class#Peer#0" />
-            <element signature="method#toString#0;class#Peer#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sites/Tools/PeersManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="44" column="4" selection-start-line="44" selection-start-column="4" selection-end-line="44" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#generatePeers#0;class#PeersManager#0" />
-            <element signature="method#display_distribution#0;class#PeersManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Sites/Tools/UpeersManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" column="4" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#upeersElection#0;class#UpeersManager#0" />
-            <element signature="method#get_Upeers#0;class#UpeersManager#0" />
-            <element signature="method#distrubute_rand_peers#0;class#UpeersManager#0" />
-            <element signature="method#display_distribution#0;class#UpeersManager#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ToolBox/GridLocation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
           <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-120">
-          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
         </state>
       </provider>
     </entry>
@@ -467,13 +423,99 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ToolBox/PlotManager.java">
+    <entry file="file://$PROJECT_DIR$/src/ToolBox/FileManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-260">
-          <caret line="19" selection-start-line="19" selection-end-line="19" />
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#getDataSet#0;class#FileManager#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sites/Tools/UpeersManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="20" lean-forward="true" selection-start-column="20" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#upeersElection#0;class#UpeersManager#0" />
+            <element signature="method#get_Upeers#0;class#UpeersManager#0" />
+            <element signature="method#distrubute_rand_peers#0;class#UpeersManager#0" />
+            <element signature="method#display_distribution#0;class#UpeersManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sites/Peer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="321">
+          <caret line="123" column="16" selection-start-line="123" selection-start-column="16" selection-end-line="123" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#setIsUpeer#0;class#Peer#0" />
+            <element signature="method#toString#0;class#Peer#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ToolBox/PlotManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="92" selection-start-line="92" selection-end-line="92" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#PlotManager#0;class#PlotManager#0" />
+            <element signature="method#addSeries#0;class#PlotManager#0" />
+            <element signature="method#addSeries#1;class#PlotManager#0" />
+            <element signature="method#updateSeries#0;class#PlotManager#0" />
+            <element signature="method#display_plot#0;class#PlotManager#0" />
+            <element signature="method#create_plots#0;class#PlotManager#0" />
+            <element signature="method#create_pms#0;class#PlotManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Schema/Tools/DataManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="452">
+          <caret line="249" column="22" selection-start-line="249" selection-start-column="22" selection-end-line="249" selection-end-column="22" />
+          <folding>
+            <element signature="method#distribute_data_toPeers#0;class#DataManager#0" />
+            <element signature="method#maxSys_data#0;class#DataManager#0" />
+            <element signature="method#maxSys_peers#0;class#DataManager#0" />
+            <element signature="method#maxSys_upeers#0;class#DataManager#0" />
+            <element signature="method#particip#0;class#DataManager#0" />
+            <element signature="method#display_data_console#0;class#DataManager#0" />
+            <element signature="method#get_c_s#0;class#DataManager#0" />
+            <element signature="method#skyLine#0;class#DataManager#0" />
+            <element signature="method#isDominant#0;class#DataManager#0" />
+            <element signature="method#isDom#0;class#DataManager#0" />
+            <element signature="method#alterSkyLine#0;class#DataManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Sites/Tools/PeersManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="625">
+          <caret line="47" column="94" selection-start-line="47" selection-start-column="94" selection-end-line="47" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#generatePeers#0;class#PeersManager#0" />
+            <element signature="method#display_peers_console#0;class#PeersManager#0" />
+            <element signature="method#display_distribution#0;class#PeersManager#0" />
+            <element signature="method#sky_participant#0;class#PeersManager#0" />
+            <element signature="method#getMaxSysList#0;class#PeersManager#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="114" column="89" lean-forward="true" selection-start-line="114" selection-start-column="89" selection-end-line="114" selection-end-column="89" />
         </state>
       </provider>
     </entry>
